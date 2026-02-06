@@ -7,6 +7,7 @@ var appServicePlanName = toLower('AppServicePlan-${webAppName}')
 resource appServicePlan 'Microsoft.Web/serverfarms@2022-09-01' = {
   name: appServicePlanName
   location: location
+  kind: 'linux'
   properties: {
     reserved: true
   }
